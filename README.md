@@ -19,7 +19,7 @@ Manager](https://github.com/tmux-plugins/tpm).
 
 2. Use <kbd>prefix</kbd>–<kbd>I</kbd> to install `tmux-plugin-vpn`.
 
-3. When you want to update `tmux-vpn` use <kbd>prefix</kbd>–<kbd>U</kbd>.
+3. When you want to update `tmux-plugin-vpn` use <kbd>prefix</kbd>–<kbd>U</kbd>.
 
 ### Manual Installation
 

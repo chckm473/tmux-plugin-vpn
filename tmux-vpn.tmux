@@ -1,9 +1,8 @@
-#!/usr/bin/env bash
-
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-vpn="#($CURRENT_DIR/scripts/vpn.sh)"
-vpn_interpolation="\#{vpn}"
+
+ip_number="#($CURRENT_DIR/scripts/vpn.sh)"
+ip_number_interpolation="\#{vpn}"
 
 set_tmux_option() {
   local option="$1"
@@ -11,21 +10,10 @@ set_tmux_option() {
   tmux set-option -gq "$option" "$value"
 }
 
-get_tmux_option() {
-  local option="$1"
-  local default_value="$2"
-  local option_value="$(tmux show-option -gqv "$option")"
-  if [ -z "$option_value" ]; then
-    echo "$default_value"
-  else
-    echo "$option_value"
-  fi
-}
-
 do_interpolation() {
   local string=$1
-  local vpn_interpolated=${string/$vpn_interpolation/$vpn}
-  echo $vpn_interpolated
+  local ip_number_interpolated=${string/$ip_number_interpolation/$ip_number}
+  echo $ip_number_interpolated
 }
 
 update_tmux_option() {
@@ -41,3 +29,4 @@ main() {
 }
 
 main
+
