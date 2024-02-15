@@ -1,4 +1,4 @@
-# tmux-vpn
+# tmux-plugin-vpn
 
 Display VPN status in [`tmux`](https://tmux.github.io/) status bar.
 
