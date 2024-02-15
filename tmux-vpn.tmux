@@ -1,7 +1,7 @@
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ip_number="#($CURRENT_DIR/scripts/vpn.sh)"
-ip_number_interpolation="\#{vpn}"
+vpn_number="#($CURRENT_DIR/scripts/vpn.sh)"
+vpn_interpolation="\#{vpn}"
 
 set_tmux_option() {
   local option="$1"
@@ -11,8 +11,8 @@ set_tmux_option() {
 
 do_interpolation() {
   local string=$1
-  local ip_number_interpolated=${string/$ip_number_interpolation/$ip_number}
-  echo $ip_number_interpolated
+  local vpn_interpolated=${string/$vpn_interpolation/$vpn_number}
+  echo $vpn_interpolated
 }
 
 update_tmux_option() {
