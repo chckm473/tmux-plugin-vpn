@@ -1,6 +1,5 @@
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-
 ip_number="#($CURRENT_DIR/scripts/vpn.sh)"
 ip_number_interpolation="\#{vpn}"
 
